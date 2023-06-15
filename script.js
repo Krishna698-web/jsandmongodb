@@ -27,10 +27,10 @@ const formforUpdating = (data) => {
   return html;
 };
 
-const updatingForm = (data) => {
-  formforUpdate.style.display = "block";
-  formforUpdate.innerHTML = formforUpdating(data);
-};
+// const updatingForm = (data) => {
+//   formforUpdate.style.display = "block";
+//   formforUpdate.innerHTML = formforUpdating(data);
+// };
 
 const addContentHandler = (data) => {
   let html =
