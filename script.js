@@ -7,10 +7,13 @@ const content = document.getElementById("content");
 const addContentHandler = (data) => {
   let html =
     `<div id=${data._id}>` +
-    `<h2>${data.name}</h2>` +
-    `<span>${data.email}</span>` +
-    `<h1>${data.password}</h1>` +
-    "</div>";
+    `<ul>` +
+    `<li>${data.name}</li>` +
+    `<li>${data.email}</li>` +
+    `<li>${data.password}</li>` +
+    `</ul>` +
+    `<button>Edit</button>` +
+    `</div>`;
 
   // console.log(html);
   return html;
