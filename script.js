@@ -3,6 +3,34 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const content = document.getElementById("content");
+const formforUpdate = document.getElementById("formforUpdate");
+
+const formforUpdating = (data) => {
+  let form =
+    `<form id=${data._id} onsubmit="" action="/">` +
+    `<div class="field">` +
+    `<label >Name:</label>` +
+    `<input type="text" name="username" />` +
+    `</div>` +
+    `<div class="field">` +
+    `<label >Email:</label>` +
+    `<input type="email" name="email" />` +
+    `</div>` +
+    `<div class="field">` +
+    `<label >password:</label>` +
+    `<input type="password" name="password" />` +
+    `</div>` +
+    `<button type="submit">Submit</button>` +
+    `</form>`;
+
+  // formforUpdate.innerHTML = form;
+  return html;
+};
+
+const updatingForm = (data) => {
+  formforUpdate.style.display = "block";
+  formforUpdate.innerHTML = formforUpdating(data);
+};
 
 const addContentHandler = (data) => {
   let html =
@@ -12,7 +40,7 @@ const addContentHandler = (data) => {
     `<li>${data.email}</li>` +
     `<li>${data.password}</li>` +
     `</ul>` +
-    `<button>Edit</button>` +
+    `<button onclick="${updatingForm(data)}">Edit</button>` +
     `</div>`;
 
   // console.log(html);
